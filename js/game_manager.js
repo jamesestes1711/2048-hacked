@@ -388,10 +388,7 @@ window.onload = function(){
     document.getElementById("tilemult").value = localStorage.getItem("tilemult");
     document.getElementById("starttiles").value = localStorage.getItem("startingtilesinput");
 }
-//    if (event.keyCode == 13) {
-//        document.getElementById("restart").click();
-//    }
-    document.getElementById("starttiles")
+    document.getElementById("applyvalues")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 13) {
