@@ -1,15 +1,11 @@
 function GameManager(size, InputManager, Actuator, StorageManager) {
-    //  localStorage.setItem("id", document.getElementById("starttiles").value)
-    //  var start = document.getElementById("starttiles").value;
     this.size = size;
-    // Size of the grid
     this.inputManager = new InputManager;
     this.storageManager = new StorageManager;
     this.actuator = new Actuator;
 
     this.startTiles = localStorage.getItem("startingtilesinput");
-    //number of tiles to start with
-
+    
     this.inputManager.on("move", this.move.bind(this));
     this.inputManager.on("restart", this.restart.bind(this));
     this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
